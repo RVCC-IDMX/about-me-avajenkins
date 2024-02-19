@@ -1,7 +1,9 @@
 body {
     font-family:"inconsolata";
-    background: color #fa34c3;
+   background-color: color #fa34c3;
     color: #62ABD2;
 
 }
-h1, h2, h3, h4, h5, h6 {font-family: "Bebas Neue";}
+h1, h2, h3, h4, h5, h6 {font-family: "Bebas Neue";
+font-size: 40pt;}
+header { text-align: center;}
