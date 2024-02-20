@@ -1,9 +1,12 @@
 body {
     font-family:"inconsolata";
-   background-color: #fa3ac3;
-    color: #62ABD2;
+   background-color: #62abd2;
+    color: #430b7f;
 
 }
 h1, h2, h3, h4, h5, h6 {font-family: "Bebas Neue";
 font-size: 40pt;}
 header { text-align: center;}
+#hero {background: color #3dabcc;: center;}
+#hero img{width: 300px;}
+#bio{text-align: center;}
