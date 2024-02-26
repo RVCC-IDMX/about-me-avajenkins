@@ -22,3 +22,5 @@ body {
   #gallery {border: 2px solid; border-color: #B4f56D;}
 
   #gallery img{max-width: 100%;}
+
+  #gallery figure{text-align: center;}
