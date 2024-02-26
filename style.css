@@ -4,9 +4,10 @@ body {
   color: #430b7f;
 
 }
-h1, h2, h3, h4, h5, h6 {font-family: "Bebas Neue";}
+h1, h2, h3, h4, h5, h6 {font-family: "Bebas Neue";text-align: center;}
 h1 {font-size: 40pt;}
 header { text-align: center;}
 #hero, footer {color: #080032;background-color: #7a64e4 ;  border: 2px solid #B4f56D; text-align: center;padding: 10px;}
 #hero img{width: 300px;}
 #bio{text-align: center;}
+#hobbies ul li:nth-child(even){color:#a160e6}
