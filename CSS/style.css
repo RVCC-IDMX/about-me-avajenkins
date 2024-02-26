@@ -4,8 +4,7 @@ body {
     color: #430b7f;
   
   }
-  h1, h2, h3, h4, h5, h6 {font-family: "Bebas Neue";text-align: center;}
-  h1 {font-size: 40pt; text-align: center;}
+  h1, h2, h3, h4, h5, h6 {font-family: "Bebas Neue";text-align: center;font-size: 40pt;}
   header { text-align: center;}
   #hero, footer {color: #080032;background-color: #7a64e4 ;  border: 2px solid #B4f56D; text-align: center;padding: 10px;}
 
@@ -19,8 +18,17 @@ body {
   #hobbies ul li:nth-child(even){color:#a160e6}
 
   /* Gallery Section*/
-  #gallery {border: 2px solid; border-color: #B4f56D;}
+  #gallery {border: 2px solid; border-color: #B4f56D;margin-bottom: 2rem;}
 
   #gallery img{max-width: 100%;}
 
   #gallery figure{text-align: center;}
+
+  /* Literature Section*/
+  #lit{border: 2px solid #B4f56D;margin-bottom: 2rem;}
+
+  #lit div{padding: 2rem;max-width: 40rem;margin:0 auto;}
+  #lit div p{padding: 0.3rem 0;}
+
+  /* Dropcaps Section */
+  #lit div p ::first-letter{color: red;float: left;font-size: 3em; line: height 0.65em;border: 1px solid black ; font-family: "bebas neue";}
