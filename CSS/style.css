@@ -8,6 +8,17 @@ body {
   h1 {font-size: 40pt; text-align: center;}
   header { text-align: center;}
   #hero, footer {color: #080032;background-color: #7a64e4 ;  border: 2px solid #B4f56D; text-align: center;padding: 10px;}
+
+  /* Hero Section */
   #hero img{width: 300px;}
+
+  /* Bio Section */
   #bio{text-align: center;}
+
+  /* Hobbies Section*/
   #hobbies ul li:nth-child(even){color:#a160e6}
+
+  /* Gallery Section*/
+  #gallery {border: 2px solid; border-color: #B4f56D;}
+
+  #gallery img{max-width: 100%;}
