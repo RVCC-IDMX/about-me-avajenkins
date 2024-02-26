@@ -31,4 +31,4 @@ body {
   #lit div p{padding: 0.3rem 0;}
 
   /* Dropcaps Section */
-  #lit div p ::first-letter{color: red;float: left;font-size: 3em; line: height 0.65em;border: 1px solid black ; font-family: "bebas neue";}
+  #lit div p :first-child:first-letter{color: red;float: left;font-size: 3em; line: height 0.65em;border: 1px solid black ; font-family: "bebas neue";}
