@@ -28,7 +28,7 @@ body {
   #lit{border: 2px solid #B4f56D;margin-bottom: 2rem;}
 
   #lit div{padding: 2rem;max-width: 40rem;margin:0 auto;}
-  #lit div p{padding: 0.3rem 0;}
+  #lit div p{padding: 0.3rem 0;clear: both;}
 
   /* Dropcaps Section */
-  #lit div p :first-child:first-letter{color: red;float: left;font-size: 3em; line: height 0.65em;border: 1px solid black ; font-family: "bebas neue";}
+  #lit div p :first-child:first-letter{color: red;float: left;font-size: 3em;line-height:0.65em;border: 1px solid black ; font-family: "bebas neue";margin-right: .25em;padding: .25em;border: 2px solid #B4f56D;}
