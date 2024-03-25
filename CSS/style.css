@@ -101,7 +101,7 @@ section#hobbies {
 
 /* Video Section */
 #myVideo {
-  margin: 20px 0;
+  margin: 20px auto;
   position: relative;
   text-align: center;
   background-color: #7a64e4;
@@ -116,7 +116,7 @@ section#hobbies {
 }
 
 #myVideo .caption {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
