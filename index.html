@@ -107,7 +107,7 @@ alt="Avatar picture of me">
 </article>
 <section id="contact">
 <h2>Contact Us:</h2>
-<form id="contact form" name="contact form">
+<form id="contact form" name="contact form" method="post" data-netlify="true">
 <fieldset>
     
 <legend>Contact Form</legend>
@@ -138,9 +138,9 @@ alt="Avatar picture of me">
 <legend>Would you like a reply?</legend>
 <ul>
 <li>
-    <input type="radio" id="message-yes"name="reply"> 
+    <input type="radio" id="message-yes"name="reply"value="Yes, a reply please."> 
     <label for="message-yes">Yes, a reply would be nice.</label></li>
-<li><input type="radio" id="message-no"name="reply" checked><label for="message-no">No thanks.</label></li>
+<li><input type="radio" id="message-no"name="reply"value="No reply please" checked><label for="message-no">No thanks.</label></li>
 </ul>
 </fieldset>
 
