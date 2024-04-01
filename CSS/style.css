@@ -142,3 +142,6 @@ section#hobbies {
     max-width: 80%;
   }
 }
+
+/* Contacts Form */
+#formelements {display: grid;}
