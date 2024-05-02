@@ -79,44 +79,28 @@ main {
         justify-content: space-between;
     }
 }
+
+/* Hamburger Icon */
 .hamburger {
-    display: none;
+    display: none; /* Hide by default */
+    cursor: pointer; /* Show pointer cursor on hover */
+    float: right; /* Float to the right */
+    padding: 14px 16px; /* Padding for the icon */
 }
 
+/* Styling for bars in the hamburger icon */
 .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #101010;
-}
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
+    width: 25px; /* Width of each bar */
+    height: 3px; /* Height of each bar */
+    background-color: #fff; /* Color of the bars */
+    margin: 6px 0; /* Margin between bars */
 }
 
-.hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
+/* Media query for hamburger icon */
+@media screen and (max-width: 768px) {
+    .navbar-links a:not(:first-child) {display: none;} /* Hide all links except the first one */
+    .navbar-links a.hamburger {
+        float: right; /* Align hamburger icon to the right */
+        display: block; /* Show the hamburger icon */
+    }
 }
