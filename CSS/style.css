@@ -207,3 +207,27 @@ legend {
 #lit img:hover {
   transform: scale(1.1);
 }
+/* Hamburger Icon */
+.hamburger {
+  display: none; /* Hide by default */
+  cursor: pointer; /* Show pointer cursor on hover */
+  float: right; /* Float to the right */
+  padding: 14px 16px; /* Padding for the icon */
+}
+
+/* Styling for bars in the hamburger icon */
+.bar {
+  width: 25px; /* Width of each bar */
+  height: 3px; /* Height of each bar */
+  background-color: #fff; /* Color of the bars */
+  margin: 6px 0; /* Margin between bars */
+}
+
+/* Media query for hamburger icon */
+@media screen and (max-width: 768px) {
+  .navbar-links a:not(:first-child) {display: none;} /* Hide all links except the first one */
+  .navbar-links a.hamburger {
+      float: right; /* Align hamburger icon to the right */
+      display: block; /* Show the hamburger icon */
+  }
+}
