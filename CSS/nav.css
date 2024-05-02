@@ -52,6 +52,39 @@ main {
 .navbar-links a:hover {
     color: #fff;
 }
+
+/* Hamburger Icon */
+.hamburger {
+    display: none; /* Hide by default */
+    cursor: pointer; /* Show pointer cursor on hover */
+    float: right; /* Float to the right */
+    padding: 14px 16px; /* Padding for the icon */
+}
+
+/* Media query for hamburger icon */
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #7a64e4;
+        width: 100%;
+    }}
+
+    .navbar-links li {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger:focus + .navbar-links,
+    .hamburger:target + .navbar-links {
+        display: block;
+    }
 /* Styling for hamburger icon */
 .hamburger {
     display: block;
