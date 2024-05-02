@@ -112,6 +112,7 @@ section#hobbies {
   color: #080032;
   border: 2px solid #b4f56d;
   padding: 10px;
+  margin: auto 0;
 }
 
 #myVideo iframe {
@@ -198,8 +199,6 @@ legend {
   justify-self: center;
 }
 
-
-/*Zoom Effect */
 #lit img {
   transition: transform 0.3s ease; height: auto; width: 200px; display: block;margin: auto 0;
 }
