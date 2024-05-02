@@ -53,6 +53,7 @@ main {
     color: #080032;
     text-decoration: none;
     transition: color 0.3s ease;
+    display: block; /* Ensure links are displayed as blocks */
 }
 
 .navbar-links a:hover {
@@ -97,7 +98,6 @@ main {
 /* Media query for hamburger icon */
 @media screen and (max-width: 768px) {
     .navbar-links {
-        display: none;
         position: absolute;
         top: 100%;
         left: 0;
@@ -105,17 +105,13 @@ main {
         width: 100%;
     }
 
-    .navbar-links li {
-        margin-right: 0;
-        text-align: center;
+    .navbar-links.active {
+        display: flex; /* Show the links when active */
+        flex-direction: column;
+        align-items: center;
     }
 
     .hamburger {
-        display: block;
-    }
-
-    .hamburger:focus + .navbar-links,
-    .hamburger:target + .navbar-links {
         display: block;
     }
 }
