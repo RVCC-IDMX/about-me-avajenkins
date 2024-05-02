@@ -1,117 +1,39 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    padding: 0;
-    margin: 0;
-  }
-  
-  main {
-    padding: 2vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Navbar Styles */
-  
-  .navbar {
+*/* Navbar */
+.navbar {
     background-color: #7a64e4;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    width: 40px;
-    margin-right: 10px;
-  }
-  
-  .navbar-links {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-links li {
-    margin-right: 20px;
-    text-align: center;
-  }
-  
-  .navbar-links a {
     color: #080032;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    display: block;
-  }
-  
-  .navbar-links a:hover {
-    color: #fff;
-  }
-  
-  .hamburger {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20px;
-    width: 30px;
-    margin-right: 20px;
-    padding: 18px 20px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 100%;
     position: relative;
-  }
-  
-  .bar {
-    width: 30px;
-    height: 4px;
-    background-color: #fff;
-    margin: 6px 0;
-  }
-  
-  /* Hamburger Icon Toggle */
-  
-  .hamburger:focus + .navbar-links,
-  .hamburger:target + .navbar-links {
-    display: block;
-  }
-  
-  /* Media Queries */
+}
 
-    .hamburger {
-      display: none;
-    }
-  
-  
-  @media screen and (max-width: 768px) {
-    .navbar-links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #7a64e4;
-      width: 100%;
-    }
-  
-    .navbar-links.active {
-      display: block;
-      padding: 1rem;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-  }
+/* navigation list */
+.navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #7a64e4;
+    width: 100%;
+}
+
+.navbar-links li {
+    list-style: none;
+    padding: 0.5em 0;
+}
+
+.navbar-links a {
+    color: #080032;
+    background-color: #7a64e4;
+    font-size: 2rem;
+    padding: 1rem 1.25rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+
