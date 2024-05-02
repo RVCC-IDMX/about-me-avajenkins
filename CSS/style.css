@@ -197,3 +197,13 @@ legend {
   width: 50%;
   justify-self: center;
 }
+
+
+/* CSS for Zoom Effect */
+#lit img {
+  transition: transform 0.3s ease; height: auto; width: 200px;
+}
+
+#lit img:hover {
+  transform: scale(1.1);
+}
