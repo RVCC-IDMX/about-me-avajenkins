@@ -10,48 +10,81 @@
 }
 
 .navbar-links {
-    list-style:none;
-    padding: 0;
-    margin: 0;
     display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-links li {
-    margin-right: 1rem;
+    margin-right: 20px;
 }
 
 .navbar-links a {
     color: #080032;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
 }
 
 .navbar-links a:hover {
     color: #fff;
 }
 
-.hamburger{position:relative; 
-    display:block;
-    width: 35px;
-    cursor:pointer;
-    appearance: none;
-    background: none;
-    outline:none; 
-    border:none;}
+.navbar-links a:active, .navbar-links a:hover {
+    background-color: #080032;
+    transition: 0.5s;
+}
 
-    .hamburger.is-active ::before {
-        transform: rotate(-45deg);translate: (-8px,6px);
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
 
+#check {
+    display: none;
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
     }
-    .hamburger.is-active .bar{
-        opacity: 0;transform: rotate(45deg);translate: (-9px,-8px);}
+    .navbar-links {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        top: 80px;
+        left: 0;
+        text-align: center;
+        display: none;
+    }
+    .navbar-links.active {
+        display: block;
+    }
+    .navbar-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-links li {
+        margin-bottom: 20px;
+    }
+    .hamburger{position: absolute;
+    top:1rem;
+right:1rem;
+z-index:1}
+}
+#hamburger-icon{font-size: 24px;}
 
-.hamburger .bar , .hamburger::after , .hamburger ::before{
-    content: '';
+#check:checked ~ .navbar-links {
     display: block;
-    width: 100%;
-    height: 
-    5px;
-    background-color: #fff;
-    margin: 6px 8px;
-    transition: 0.4s;}
+}
