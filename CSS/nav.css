@@ -11,7 +11,7 @@
 
 /* navigation list */
 .navbar-links {
-    display: none;
+    display:block;
     position: absolute;
     top: 100%;
     left: 0;
@@ -20,7 +20,7 @@
 }
 
 .navbar-links li {
-    list-style: none;
+    list-style:none;
     padding: 0.5em 0;
 }
 
