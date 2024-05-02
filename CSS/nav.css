@@ -1,138 +1,124 @@
-/* make scrolling smooth */
-html {
-    scroll-behavior: smooth;
-}
-
-/* 
- get rid of padding & sizing on body so
- header is at top
-*/
-body {
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
     padding: 0;
     margin: 0;
-}
-
-/* add some padding back to rest of page */
-main {
+  }
+  
+  main {
     padding: 2vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-/* Navbar */
-.navbar {
+  }
+  
+  /* Navbar Styles */
+  
+  .navbar {
     background-color: #7a64e4;
-    color: #080032;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
     padding: 1rem;
-    width: 100%;
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.navbar-links {
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: space-between;
     list-style: none;
-    padding: 0;
     margin: 0;
-    display: none; /* Hide by default */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #7a64e4;
-    width: 100%;
-}
-
-.navbar-links.active {
-    display: block; /* Show when active */
-    padding: 1rem;
-}
-
-.navbar-links li {
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin-right: 20px;
     text-align: center;
-    margin-bottom: 1rem; /* Add some space between links */
-}
-
-.navbar-links a {
+  }
+  
+  .navbar-links a {
     color: #080032;
     text-decoration: none;
     transition: color 0.3s ease;
-    display: block; /* Ensure links are displayed as blocks */
-}
-
-.navbar-links a:hover {
+    display: block;
+  }
+  
+  .navbar-links a:hover {
     color: #fff;
-}
-
-/* Hamburger Icon */
-.hamburger {
-    display: block; /* Show by default */
+  }
+  
+  .hamburger {
     cursor: pointer;
-    padding: 18px 20px; /* Adjust padding for size */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 30px;
+    margin-right: 20px;
+    padding: 18px 20px;
     position: relative;
-}
-
-/* Styling for bars in the hamburger icon */
-.bar {
-    width: 30px; /* Adjust width for size */
-    height: 4px; /* Adjust height for size */
+  }
+  
+  .bar {
+    width: 30px;
+    height: 4px;
     background-color: #fff;
     margin: 6px 0;
-}
-
-/* Toggle effect */
-.hamburger:focus + .navbar-links,
-.hamburger:target + .navbar-links {
-    display: block; /* Show the links when hamburger is clicked */
-}
-
-/* Media query for hamburger icon */
-@media screen and (min-width: 769px) {
+  }
+  
+  /* Hamburger Icon Toggle */
+  
+  .hamburger:focus + .navbar-links,
+  .hamburger:target + .navbar-links {
+    display: block;
+  }
+  
+  /* Media Queries */
+  
+  @media screen and (min-width: 769px) {
     .navbar-links {
-        display: flex; /* Show the links by default on larger screens */
-        position: static;
-        background-color: transparent;
+      display: flex;
+      position: static;
+      background-color: transparent;
     }
-
+  
     .hamburger {
-        display: none; /* Hide the hamburger icon on larger screens */
+      display: none;
     }
-}
-
-/* Media query for hamburger icon */
-@media screen and (max-width: 768px) {
+  }
+  
+  @media screen and (max-width: 768px) {
     .navbar-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #7a64e4;
-        width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #7a64e4;
+      width: 100%;
     }
-
+  
     .navbar-links.active {
-        display: block; /* Show the links when active */
-        padding: 1rem;
+      display: block;
+      padding: 1rem;
     }
-
+  
     .hamburger {
-        display: block;
+      display: block;
     }
-}
-
-/* Add this to make each section name a button that leads to the right location on the page */
-.navbar-links a[href*="#"] {
-    text-decoration: none;
-    color: #080032;
-}
-
-.navbar-links a[href*="#"]:hover {
-    color: #fff;
-}
-
-.navbar-links a[href*="#"]:active {
-    color: #fff;
-}
+  }
