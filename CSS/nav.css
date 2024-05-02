@@ -7,6 +7,8 @@
     padding: 1rem;
     width: 98%;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .navbar-links {
@@ -67,6 +69,7 @@
         left: 0;
         text-align: center;
         display: none;
+        flex-direction: column;
     }
     .navbar-links.active {
         display: block;
