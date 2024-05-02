@@ -201,7 +201,7 @@ legend {
 
 /* CSS for Zoom Effect */
 #lit img {
-  transition: transform 0.3s ease; height: auto; width: 200px;
+  transition: transform 0.3s ease; height: auto; width: 200px; justify-content: center;
 }
 
 #lit img:hover {
