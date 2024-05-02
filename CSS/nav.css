@@ -21,68 +21,71 @@ main {
     align-items: center;
 }
 
-/* Navbar */
 .navbar {
     background-color: #7a64e4;
     color: #080032;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     padding: 1rem;
-    width: 100%;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    width: 100%; /* Adjust width as needed */
 }
 
-/* navigation list */
-.navbar-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Logo */
+.logo {
+    display: inline-block; /* Display inline to align ALJ and Web Dev */
 }
 
-.navbar-links li {
-    list-style: none;
-    display: block;
-    padding: 0.5em 0;
+.logo img {
+    height: 6vw;
+    width: 6vw;
 }
 
-/* style all a tags in header and then on hover */
-.navbar-links a {
-    color: #080032;
-    background-color: #7a64e4;
-    font-size: 2rem;
-    padding: 1rem 1.25rem;
-    letter-spacing: 2px;
-    text-decoration: none;
+.logo h1 {
+    font-size: 1.2em;
     display: inline-block;
-}
-
-.navbar-links a:hover, 
-.navbar-links a:focus {
-    color: #080032;
-    background-color: #7a64e4;
-    border-radius: 10px;
-    outline: none;
+    margin-left: 0.5em; /* Add margin to separate ALJ and Web Dev */
 }
 
 /* Hamburger Icon */
 .hamburger {
-    display: none;
-    cursor: pointer;
-    float: right;
-    padding: 14px 16px;
+    display: none; /* Initially hidden */
+    cursor: pointer; /* Show pointer cursor on hover */
+    float: right; /* Align to the right */
+    padding: 14px 16px; /* Padding for the icon */
 }
 
+/* Styling for bars in the hamburger icon */
 .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
+    width: 25px; /* Width of each bar */
+    height: 3px; /* Height of each bar */
+    background-color: #fff; /* Color of the bars */
+    margin: 6px 0; /* Margin between bars */
 }
 
+/* Media query for hamburger icon */
 @media screen and (max-width: 768px) {
-    .navbar-links a:not(:first-child) {display: none;}
+    .navbar-links {
+        display: none; /* Initially hide the links */
+        flex-direction: column; /* Align links vertically */
+        align-items: center; /* Center align links */
+        width: 100%; /* Make full width */
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column; /* Align links vertically */
+        align-items: center; /* Center align links */
+    }
+
+    .navbar-links a {
+        display: block; /* Display as block for full width */
+    }
+
+    .navbar-links a:not(:first-child) {
+        display: none; /* Hide all links except the first one */
+    }
+
     .navbar-links a.hamburger {
-        float: right;
-        display: block;
+        display: block; /* Show the hamburger icon */
     }
 }
