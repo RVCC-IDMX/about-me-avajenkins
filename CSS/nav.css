@@ -3,7 +3,10 @@ html {
     scroll-behavior: smooth;
 }
 
-/* get rid of padding & sizing on body so header is at top */
+/* 
+ get rid of padding & sizing on body so
+ header is at top
+*/
 body {
     box-sizing: border-box;
     padding: 0;
@@ -58,7 +61,7 @@ main {
 
 /* Hamburger Icon */
 .hamburger {
-    display: none; /* Hide by default */
+    display: block; /* Show by default */
     cursor: pointer;
     padding: 18px 20px; /* Adjust padding for size */
     position: relative;
@@ -79,12 +82,40 @@ main {
 }
 
 /* Media query for hamburger icon */
-@media screen and (max-width: 768px) {
-    .navbar-links li {
-        margin-right: 0;
+@media screen and (min-width: 769px) {
+    .navbar-links {
+        display: flex; /* Show the links by default on larger screens */
+        position: static;
+        background-color: transparent;
     }
 
     .hamburger {
-        display: block; /* Show the hamburger icon on smaller screens */
+        display: none; /* Hide the hamburger icon on larger screens */
+    }
+}
+
+/* Media query for hamburger icon */
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #7a64e4;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger:focus + .navbar-links,
+    .hamburger:target + .navbar-links {
+        display: block;
     }
 }
