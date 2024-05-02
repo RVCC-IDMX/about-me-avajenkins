@@ -137,3 +137,7 @@ such that no text wraps
 .navbar-links {
     display: none;
 }
+
+.menu-toggle:not(:checked) ~ .navbar-links {
+    display: block;
+}
