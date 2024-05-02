@@ -28,8 +28,7 @@ main {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     padding: 1rem;
-    width: 100%; /* Adjust width as needed */
-    background-color: #4CAF50; /* Green color */
+    width: 100%;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
@@ -46,10 +45,7 @@ main {
     padding: 0.5em 0;
 }
 
-/*  
- style all a tags in header 
- and then on hover
-*/
+/* style all a tags in header and then on hover */
 .navbar-links a {
     color: #080032;
     background-color: #7a64e4;
@@ -68,39 +64,25 @@ main {
     outline: none;
 }
 
-/* Media query for non-mobile nav bar */
-@media screen and (min-width: 60rem) {
-    .navbar-links {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .navbar ul {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
 /* Hamburger Icon */
 .hamburger {
-    display: none; /* Hide by default */
-    cursor: pointer; /* Show pointer cursor on hover */
-    float: right; /* Float to the right */
-    padding: 14px 16px; /* Padding for the icon */
+    display: none;
+    cursor: pointer;
+    float: right;
+    padding: 14px 16px;
 }
 
-/* Styling for bars in the hamburger icon */
 .bar {
-    width: 25px; /* Width of each bar */
-    height: 3px; /* Height of each bar */
-    background-color: #fff; /* Color of the bars */
-    margin: 6px 0; /* Margin between bars */
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
 }
 
-/* Media query for hamburger icon */
 @media screen and (max-width: 768px) {
-    .navbar-links a:not(:first-child) {display: none;} /* Hide all links except the first one */
+    .navbar-links a:not(:first-child) {display: none;}
     .navbar-links a.hamburger {
-        float: right; /* Align hamburger icon to the right */
-        display: block; /* Show the hamburger icon */
+        float: right;
+        display: block;
     }
 }
