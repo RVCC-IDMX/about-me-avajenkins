@@ -26,3 +26,10 @@ RGB: 180, 245, 109
 Hex: #B4f56D
 
 These color schemes give the viewer an eccentric feeling to the website almost as a futuristic game made in the 1980s. The harmonious shades of blue and purple with an accent and outline color of bright green to really accentuate the features.
+
+
+
+Sources
+https://www.smashingmagazine.com/2022/03/guide-hover-pointer-media-queries/
+https://codepen.io/vaishali1192/pen/QWdJZVy
+https://www.w3schools.com/howto/howto_css_zoom_hover.asp
