@@ -32,31 +32,26 @@ main {
     position: relative;
 }
 
-/* navigation list */
 .navbar-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #7a64e4;
-    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 .navbar-links li {
-    list-style: none;
-    padding: 0.5em 0;
+    margin-right: 1rem;
 }
 
 .navbar-links a {
     color: #080032;
-    background-color: #7a64e4;
-    font-size: 2rem;
-    padding: 1rem 1.25rem;
-    letter-spacing: 2px;
     text-decoration: none;
-    display: block;
+    transition: color 0.3s ease;
 }
 
+.navbar-links a:hover {
+    color: #fff;
+}
 /* Styling for hamburger icon */
 .hamburger {
     display: block;
