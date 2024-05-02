@@ -30,6 +30,9 @@ main {
     padding: 1rem;
     width: 100%;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-links {
@@ -45,9 +48,8 @@ main {
 }
 
 .navbar-links.active {
-    display: flex; /* Show when active */
-    flex-direction: column;
-    align-items: center;
+    display: block; /* Show when active */
+    padding: 1rem;
 }
 
 .navbar-links li {
@@ -112,12 +114,25 @@ main {
     }
 
     .navbar-links.active {
-        display: flex; /* Show the links when active */
-        flex-direction: column;
-        align-items: center;
+        display: block; /* Show the links when active */
+        padding: 1rem;
     }
 
     .hamburger {
         display: block;
     }
+}
+
+/* Add this to make each section name a button that leads to the right location on the page */
+.navbar-links a[href*="#"] {
+    text-decoration: none;
+    color: #080032;
+}
+
+.navbar-links a[href*="#"]:hover {
+    color: #fff;
+}
+
+.navbar-links a[href*="#"]:active {
+    color: #fff;
 }
