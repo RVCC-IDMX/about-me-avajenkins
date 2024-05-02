@@ -57,25 +57,32 @@ main {
     display: block;
 }
 
-/* Styling for hamburger icon */
+/* Styles for hamburger icon */
 .hamburger {
-    display: block;
+    display: none;
     cursor: pointer;
     float: right;
     padding: 14px 16px;
-    position: relative;
 }
 
-/* Styling for bars in the hamburger icon */
-.bar {
+.hamburger .bar {
     width: 25px;
     height: 3px;
     background-color: #fff;
     margin: 6px 0;
 }
 
-/* Toggle effect */
-.hamburger:focus + .navbar-links,
-.hamburger:target + .navbar-links {
+/* Styles for showing navbar links */
+#menu-toggle:checked ~ .navbar-links {
     display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
