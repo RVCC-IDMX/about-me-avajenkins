@@ -21,18 +21,23 @@ main {
     align-items: center;
 }
 
+/* Navbar */
 .navbar {
     background-color: #7a64e4;
     color: #080032;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     padding: 1rem;
-    width: 100%; /* Adjust width as needed */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Logo */
 .logo {
-    display: inline-block; /* Display inline to align ALJ and Web Dev */
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
@@ -42,50 +47,52 @@ main {
 
 .logo h1 {
     font-size: 1.2em;
-    display: inline-block;
-    margin-left: 0.5em; /* Add margin to separate ALJ and Web Dev */
+    margin-left: 0.5em;
 }
 
 /* Hamburger Icon */
 .hamburger {
-    display: none; /* Initially hidden */
-    cursor: pointer; /* Show pointer cursor on hover */
-    float: right; /* Align to the right */
-    padding: 14px 16px; /* Padding for the icon */
+    display: none;
+    cursor: pointer;
+    padding: 14px 16px;
 }
 
 /* Styling for bars in the hamburger icon */
 .bar {
-    width: 25px; /* Width of each bar */
-    height: 3px; /* Height of each bar */
-    background-color: #fff; /* Color of the bars */
-    margin: 6px 0; /* Margin between bars */
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
 }
 
 /* Media query for hamburger icon */
 @media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start */
+        padding: 0.5rem;
+    }
+
     .navbar-links {
-        display: none; /* Initially hide the links */
-        flex-direction: column; /* Align links vertically */
-        align-items: center; /* Center align links */
-        width: 100%; /* Make full width */
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #7a64e4; /* Match navbar background color */
     }
 
-    .navbar ul {
+    .navbar-links.active {
         display: flex;
-        flex-direction: column; /* Align links vertically */
-        align-items: center; /* Center align links */
     }
 
-    .navbar-links a {
-        display: block; /* Display as block for full width */
+    .navbar-links li {
+        padding: 1rem;
     }
 
-    .navbar-links a:not(:first-child) {
-        display: none; /* Hide all links except the first one */
-    }
-
-    .navbar-links a.hamburger {
-        display: block; /* Show the hamburger icon */
+    .hamburger {
+        display: block;
     }
 }
