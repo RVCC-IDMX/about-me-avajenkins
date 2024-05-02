@@ -3,10 +3,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 
- get rid of padding & sizing on body so
- header is at top
-*/
+/* get rid of padding & sizing on body so header is at top */
 body {
     box-sizing: border-box;
     padding: 0;
@@ -20,6 +17,7 @@ main {
     flex-direction: column;
     align-items: center;
 }
+
 /* Navbar */
 .navbar {
     background-color: #7a64e4;
@@ -41,12 +39,11 @@ main {
     left: 0;
     background-color: #7a64e4;
     width: 100%;
-    z-index: 1; /* Ensure it's above other content */
 }
 
 .navbar-links li {
-    margin-right: 0;
     text-align: center;
+    margin-bottom: 1rem; /* Add some space between links */
 }
 
 .navbar-links a {
@@ -61,9 +58,8 @@ main {
 
 /* Hamburger Icon */
 .hamburger {
-    display: block;
+    display: none; /* Hide by default */
     cursor: pointer;
-    float: right;
     padding: 18px 20px; /* Adjust padding for size */
     position: relative;
 }
@@ -83,60 +79,12 @@ main {
 }
 
 /* Media query for hamburger icon */
-@media screen and (min-width: 769px) {
-    .navbar-links {
-        display: flex; /* Show the links by default on larger screens */
-        position: static;
-        background-color: transparent;
-    }
-
-    .hamburger {
-        display: none; /* Hide the hamburger icon on larger screens */
-    }
-}
-/* Media query for hamburger icon */
 @media screen and (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #7a64e4;
-        width: 100%;
-    }}
-
     .navbar-links li {
         margin-right: 0;
-        text-align: center;
     }
 
     .hamburger {
-        display: block;
+        display: block; /* Show the hamburger icon on smaller screens */
     }
-
-    .hamburger:focus + .navbar-links,
-    .hamburger:target + .navbar-links {
-        display: block;
-    }
-/* Styling for hamburger icon */
-.hamburger {
-    display: block;
-    cursor: pointer;
-    float: right;
-    padding: 18px 20px; /* Adjust padding for size */
-    position: relative;
-}
-
-/* Styling for bars in the hamburger icon */
-.bar {
-    width: 30px; /* Adjust width for size */
-    height: 4px; /* Adjust height for size */
-    background-color: #fff;
-    margin: 6px 0;
-}
-
-/* Toggle effect */
-.hamburger:focus + .navbar-links,
-.hamburger:target + .navbar-links {
-    display: block;
 }
