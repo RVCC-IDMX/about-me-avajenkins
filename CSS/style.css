@@ -40,7 +40,7 @@ h2 {
 
 /* Hobbies Section*/
 #hobbies ul li:nth-child(even) {
-  color: #a160e6;
+  color: #080032;
 }
 
 section#hobbies {
@@ -105,19 +105,23 @@ section#hobbies {
 
 /* Video Section */
 #myVideo {
-  margin: 20px 0;
-  position: absolute;
+  margin: 20px auto;
+  position: relative;
   text-align: center;
   background-color: #7a64e4;
   color: #080032;
   border: 2px solid #b4f56d;
   padding: 10px;
   margin: auto 0;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #myVideo iframe {
   width: 100%;
-  height: 100%; justify-self: center;
+  height: 100%; 
 }
 
 #myVideo .caption {
@@ -145,6 +149,7 @@ section#hobbies {
   #myVideo {
     margin: 20px auto;
     max-width: 80%;
+    align-items: center;
   }
 }
 

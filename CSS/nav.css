@@ -9,6 +9,7 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    border: 2px solid #b4f56d;
 }
 
 .navbar-links {
@@ -17,10 +18,11 @@
     list-style: none;
     margin: 0;
     padding: 0;
+
 }
 
 .navbar-links li {
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .navbar-links a {
@@ -31,6 +33,7 @@
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
+    margin: 0 120px;
 }
 
 .navbar-links a:hover {
@@ -80,14 +83,10 @@
     }
     .navbar-links li {
         margin-bottom: 20px;
-    }
-    .hamburger{position: absolute;
-    top:1rem;
-right:1rem;
-z-index:1}
-}
-#hamburger-icon{font-size: 24px;}
-
+    }}
 #check:checked ~ .navbar-links {
     display: block;
 }
+
+/** all of the above was my last attempt on a tutorial for the hamburger icon, I think I am just having bad luck trying to do it 
+all myself with just youtube tutorials. Sorry and thanks!**/

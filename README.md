@@ -11,7 +11,7 @@ The About Me Project is a showcase of my skills learned in webpage development o
 ### Skills Learned
 HTML: Over time I learned how to use HTML to format my website and inserting its neccessities. This includes the header, body, and making different sections which will help when later inserting CSS work. I also learned how to insert images properly and how to size them such as my logo.
 
-CSS: 
+CSS: In this course, my knowledge of CSS has grown since the course I took in highschool. There is a whole world of measurements and little elements in CSS. I was glad to learn get comfortable with px, rem, and em measurements. As well as, 
 
 #### Color Schemes:
 
