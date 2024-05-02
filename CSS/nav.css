@@ -91,18 +91,11 @@
   }
   
   /* Media Queries */
-  
-  @media screen and (min-width: 769px) {
-    .navbar-links {
-      display: flex;
-      position: static;
-      background-color: transparent;
-    }
-  
+
     .hamburger {
       display: none;
     }
-  }
+  
   
   @media screen and (max-width: 768px) {
     .navbar-links {
