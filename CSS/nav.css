@@ -95,13 +95,21 @@ such that no text wraps
         justify-content: space-between;
     }
 }
+.navbar {
+    background-color: #7a64e4;
+    color: #080032;
+    display: flex;
+    align-items: center; /* Center align logo and menu icon */
+    justify-content: space-between; /* Space between logo and menu */
+    padding: 1rem;
+}
+
+/* Hamburger menu icon styles */
 .hamburger {
     display: block;
     width: 30px;
     height: 30px;
     cursor: pointer;
-    margin-left: auto;
-    padding-right: 1rem;
 }
 
 .bar {
@@ -112,32 +120,23 @@ such that no text wraps
     transition: 0.4s;
 }
 
-.menu-toggle {
-    display: none;
+/* Navbar links styles */
+.navbar-links {
+    display: none; /* Initially hide the menu links */
 }
 
-.menu-toggle:checked ~ .navbar-links {
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links a {
+    color: #080032;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
     display: block;
 }
 
-/* Transform bars into X */
-.menu-toggle:checked ~ .hamburger .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-6px, 6px);
-}
-
-.menu-toggle:checked ~ .hamburger .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle:checked ~ .hamburger .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-6px, -6px);
-}
-
-/* Responsive Navigation Links */
-.navbar-links {
-    display: none;
-}
-
-.menu-toggle:not(:checked) ~ .navbar-links {
+/* Show menu links when the toggle is checked */
+.menu-toggle:checked ~ .navbar-links {
     display: block;
 }
