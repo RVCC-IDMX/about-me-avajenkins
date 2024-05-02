@@ -59,30 +59,20 @@ main {
 
 /* Styling for hamburger icon */
 .hamburger {
-    display: none; /* Hide by default */
-    cursor: pointer; /* Show pointer cursor on hover */
-    float: right; /* Float to the right */
-    padding: 18px 20px; /* Adjusted padding for the icon */
+    display: block;
+    cursor: pointer;
+    float: right;
+    padding: 18px 20px; /* Adjust padding for size */
     position: relative;
 }
 
 /* Styling for bars in the hamburger icon */
 .bar {
-    width: 25px; /* Width of each bar */
-    height: 3px; /* Height of each bar */
-    background-color: #fff; /* Color of the bars */
-    margin: 6px 0; /* Margin between bars */
+    width: 30px; /* Adjust width for size */
+    height: 4px; /* Adjust height for size */
+    background-color: #fff;
+    margin: 6px 0;
 }
-
-/* Media query for hamburger icon */
-@media screen and (max-width: 768px) {
-    .navbar-links a:not(:first-child) {display: none;} /* Hide all links except the first one */
-    .navbar-links a.hamburger {
-        float: right; /* Align hamburger icon to the right */
-        display: block; /* Show the hamburger icon */
-    }
-}
-
 
 /* Toggle effect */
 .hamburger:focus + .navbar-links,
