@@ -16,39 +16,30 @@ body {
 /* add some padding back to rest of page */
 main {
     padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* navbar */
+/* Navbar */
 .navbar {
     background-color: #7a64e4;
     color: #080032;
-    display: contents;
-    flex-direction: column;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     padding: 1rem;
-    width: 200px; /* Adjust width as needed */
-    height: 180px; /* Adjust height as needed */
+    width: 100%; /* Adjust width as needed */
     background-color: #4CAF50; /* Green color */
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-/* logo */
-.logo {
+/* navigation list */
+.navbar-links {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.logo img {
-    height: 6vw;
-    width: 6vw;
-}
-
-.logo h1 {
-    font-size: 1.2em;
-}
-
-/* navigation list */
 .navbar-links li {
     list-style: none;
     display: block;
@@ -77,18 +68,11 @@ main {
     outline: none;
 }
 
-/* 
-media query for non-mobile nav bar
-min-width set to width of nav elements 
-such that no text wraps 
-*/
+/* Media query for non-mobile nav bar */
 @media screen and (min-width: 60rem) {
     .navbar-links {
-        display: flex;
-        justify-content: space-between;
-    }
-    .navbar {
         flex-direction: row;
+        justify-content: space-between;
     }
     .navbar ul {
         display: flex;
