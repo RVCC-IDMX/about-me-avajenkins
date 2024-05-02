@@ -62,14 +62,14 @@ main {
     display: block;
     cursor: pointer;
     float: right;
-    padding: 14px 16px;
+    padding: 18px 20px; /* Adjust padding for size */
     position: relative;
 }
 
 /* Styling for bars in the hamburger icon */
 .bar {
-    width: 25px;
-    height: 3px;
+    width: 30px; /* Adjust width for size */
+    height: 4px; /* Adjust height for size */
     background-color: #fff;
     margin: 6px 0;
 }
