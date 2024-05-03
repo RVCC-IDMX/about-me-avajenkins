@@ -1,45 +1,92 @@
-/* make scrolling smooth */
-html{scroll-behavior: smooth;}
-
-/* 
- get rid of padding & sizing on body so
- header is at top
-*/
-body{box-sizing: border-box; padding: 0;margin: 0;}
-
-/* add some padding back to rest of page */
-main{padding: 2vw;}
-
-/* navbar */
-.navbar {background-color: #7a64e4;color:#080032;display: contents;flex-direction: column;font-size: 1.5rem;margin-bottom: 1rem;padding:1rem;}
-
-
-/* logo */
-.logo {display: flex;align-items: center;}
-
-.logo img{height:6vw;width: 6vw;}
-
-.logo h1{font-size: 1.2em;}
-/* navigation list */
-.navbar-links li{list-style: none;display: block;padding: 0.5em 0;}
-
-/*  
- style all a tags in header 
- and then on hover
-*/
-.navbar-links a{color:#080032;background-color:#7a64e4 ;font-size: 2rem;padding: 1rem 1.25rem;
-letter-spacing: 2px;text-decoration: none;display: inline-block;}
-
-.navbar-links a:hover, .navbar-links a:focus{color:#080032 ;background-color: #7a64e4;border-radius: 10px;
-outline: none;}
-
-/* 
-media query for non-mobile nav bar
-min-width set to width of nav elements 
-such that no text wraps 
-*/
-@media screen and (min-width: 60rem) {.navbar-links{display: flex;justify-content: space-between;}
-.navbar{flex-direction: row;}
-.navbar ul{display: flex;justify-content: space-between;}
-    
+/* Navbar */
+.navbar {
+    background-color: #7a64e4;
+    color: #080032;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 98%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #b4f56d;
 }
+
+.navbar-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar-links li {
+    margin-right: 40px;
+}
+
+.navbar-links a {
+    color: #080032;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin: 0 120px;
+}
+
+.navbar-links a:hover {
+    color: #fff;
+}
+
+.navbar-links a:active, .navbar-links a:hover {
+    background-color: #080032;
+    transition: 0.5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    .navbar-links {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        top: 80px;
+        left: 0;
+        text-align: center;
+        display: none;
+        flex-direction: column;
+    }
+    .navbar-links.active {
+        display: block;
+    }
+    .navbar-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-links li {
+        margin-bottom: 20px;
+    }}
+#check:checked ~ .navbar-links {
+    display: block;
+}
+
+/** all of the above was my last attempt on a tutorial for the hamburger icon, I think I am just having bad luck trying to do it 
+all myself with just youtube tutorials. Sorry and thanks!**/
